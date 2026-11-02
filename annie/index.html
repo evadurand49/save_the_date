@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f1e6">
+  <meta name="description" content="Venez fêter l'anniversaire d'Annie le vendredi 23 avril 2027, à Villedieu-les-Poêles.">
+  <title>La fête d'Annie — 23 avril 2027</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: "Trebuchet MS", Arial, sans-serif;
+      color: #344536;
+      background: #f5f1e6;
+      font-synthesis: none;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      --green: #49664b;
+      --green-dark: #304c36;
+      --sage: #e7ebdc;
+      --paper: #fffdf7;
+      --muted: #6e7667;
+      --border: #dce1d2;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      min-width: 320px;
+      min-height: 100vh;
+      min-height: 100svh;
+      margin: 0;
+      padding: 32px 18px;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(ellipse at 10% 12%, rgba(201, 211, 180, .28), transparent 34rem),
+        radial-gradient(ellipse at 92% 88%, rgba(217, 199, 157, .2), transparent 30rem),
+        #f5f1e6;
+    }
+
+    .invitation {
+      position: relative;
+      width: min(100%, 620px);
+      overflow: hidden;
+      padding: clamp(32px, 7vw, 58px) clamp(22px, 7vw, 64px) 36px;
+      border: 1px solid #e4e3d6;
+      border-radius: 8px;
+      background: var(--paper);
+      box-shadow: 0 18px 55px rgba(67, 76, 52, .1);
+      text-align: center;
+    }
+
+    .invitation::before,
+    .invitation::after {
+      position: absolute;
+      width: 112px;
+      height: 112px;
+      border: 1px solid rgba(112, 137, 99, .25);
+      border-radius: 50%;
+      content: "";
+      pointer-events: none;
+    }
+
+    .invitation::before { top: -77px; left: -64px; }
+    .invitation::after { right: -64px; bottom: -77px; }
+
+    .sprig {
+      display: block;
+      width: 58px;
+      height: 58px;
+      margin: 0 auto 15px;
+      color: var(--green);
+    }
+
+    .eyebrow {
+      margin: 0;
+      color: var(--green);
+      font-size: .73rem;
+      font-weight: 700;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 13px 0 8px;
+      color: var(--green-dark);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(3.2rem, 12vw, 5.2rem);
+      font-weight: 400;
+      letter-spacing: -.055em;
+      line-height: 1;
+    }
+
+    .intro {
+      max-width: 390px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.05rem, 3.5vw, 1.25rem);
+      line-height: 1.65;
+    }
+
+    .rule {
+      width: 76px;
+      height: 1px;
+      margin: 28px auto;
+      border: 0;
+      background: #b7c3a9;
+    }
+
+    .date-label {
+      margin: 0 0 8px;
+      color: var(--muted);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .17em;
+      text-transform: uppercase;
+    }
+
+    .date {
+      margin: 0;
+      color: var(--green-dark);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.45rem, 5vw, 2rem);
+      line-height: 1.3;
+    }
+
+    .countdown-title {
+      margin: 27px 0 12px;
+      color: var(--muted);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: clamp(8px, 3vw, 16px);
+    }
+
+    .unit {
+      display: grid;
+      min-width: 62px;
+      gap: 5px;
+      padding: 12px 10px 10px;
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      background: #fbfcf7;
+    }
+
+    .unit span {
+      color: var(--green-dark);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.5rem, 6vw, 2rem);
+      font-variant-numeric: tabular-nums;
+      line-height: 1;
+    }
+
+    .unit small {
+      color: var(--muted);
+      font-size: .64rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .event-day {
+      min-height: 1.5em;
+      margin: 13px 0 0;
+      color: var(--green);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.1rem;
+      font-style: italic;
+    }
+
+    .venue {
+      margin: 0;
+      color: var(--green-dark);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.25rem;
+      line-height: 1.45;
+    }
+
+    .town {
+      margin: 5px 0 19px;
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    .map-link {
+      display: inline-flex;
+      min-height: 46px;
+      align-items: center;
+      justify-content: center;
+      padding: 11px 20px;
+      border: 1px solid var(--green);
+      border-radius: 4px;
+      background: var(--green);
+      color: #fff;
+      font-size: .88rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background-color .18s ease, border-color .18s ease;
+    }
+
+    .map-link:hover { border-color: var(--green-dark); background: var(--green-dark); }
+    .map-link:focus-visible { outline: 3px solid #bd8f48; outline-offset: 3px; }
+
+    .footer {
+      margin: 30px 0 0;
+      color: var(--muted);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: .94rem;
+      font-style: italic;
+    }
+
+    @media (max-width: 380px) {
+      body { padding: 16px 10px; }
+      .unit { min-width: 56px; padding-inline: 7px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="invitation">
+    <svg class="sprig" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+      <path d="M32 56C32 39 34 22 47 8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+      <path d="M36 40c-10-1-15-6-16-13 9 0 15 4 16 13Zm3-12c-1-8 2-14 8-18 3 8 0 14-8 18Zm-5 20c-9-1-14-5-16-12 9 0 14 4 16 12Z" fill="#e7ebdc" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+      <circle cx="18" cy="14" r="3" fill="#c39b60"/>
+      <circle cx="24" cy="11" r="3" fill="#d2ad71"/>
+      <circle cx="21" cy="19" r="3" fill="#b7815e"/>
+    </svg>
+
+    <p class="eyebrow">Une belle journée à la campagne</p>
+    <h1>Annie</h1>
+    <p class="intro">Vous êtes chaleureusement invités à célébrer son anniversaire&nbsp;!</p>
+
+    <hr class="rule">
+
+    <p class="date-label">À vos agendas</p>
+    <p class="date"><time datetime="2027-04-23">Vendredi 23 avril 2027</time></p>
+
+    <p class="countdown-title">Le compte à rebours est lancé</p>
+    <div class="countdown" id="countdown" role="timer" aria-label="Compte à rebours jusqu'au 23 avril 2027">
+      <div class="unit"><span id="days">--</span><small>Jours</small></div>
+      <div class="unit"><span id="hours">--</span><small>Heures</small></div>
+      <div class="unit"><span id="minutes">--</span><small>Minutes</small></div>
+      <div class="unit"><span id="seconds">--</span><small>Secondes</small></div>
+    </div>
+    <p class="event-day" id="event-day" aria-live="polite"></p>
+
+    <hr class="rule">
+
+    <p class="date-label">Rendez-vous à</p>
+    <p class="venue">Auberge St Vincent au Parc</p>
+    <p class="town">Villedieu-les-Poêles</p>
+    <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Auberge+St+Vincent+au+Parc%2C+Villedieu-les-Po%C3%AAles" target="_blank" rel="noopener noreferrer">
+      Voir le lieu sur la carte
+    </a>
+
+    <p class="footer">Au plaisir de fêter cela ensemble&nbsp;!</p>
+  </main>
+
+  <script>
+    const eventStart = new Date("2027-04-23T00:00:00+02:00").getTime();
+    const eventEnd = new Date("2027-04-24T00:00:00+02:00").getTime();
+    const units = {
+      days: document.getElementById("days"),
+      hours: document.getElementById("hours"),
+      minutes: document.getElementById("minutes"),
+      seconds: document.getElementById("seconds")
+    };
+    const eventDay = document.getElementById("event-day");
+    const pad = value => String(value).padStart(2, "0");
+
+    function updateCountdown() {
+      const now = Date.now();
+
+      if (now >= eventStart && now < eventEnd) {
+        Object.values(units).forEach(unit => { unit.textContent = "00"; });
+        eventDay.textContent = "C’est aujourd’hui !";
+        return;
+      }
+
+      if (now >= eventEnd) {
+        Object.values(units).forEach(unit => { unit.textContent = "00"; });
+        eventDay.textContent = "Cette belle journée est passée.";
+        return;
+      }
+
+      const remaining = eventStart - now;
+      units.days.textContent = Math.floor(remaining / 86400000);
+      units.hours.textContent = pad(Math.floor(remaining / 3600000) % 24);
+      units.minutes.textContent = pad(Math.floor(remaining / 60000) % 60);
+      units.seconds.textContent = pad(Math.floor(remaining / 1000) % 60);
+      eventDay.textContent = "";
+    }
+
+    updateCountdown();
+    window.setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
