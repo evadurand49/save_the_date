@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f5f1e6">
-  <meta name="description" content="Venez fêter l'anniversaire d'Annie le vendredi 23 avril 2027, à Villedieu-les-Poêles.">
-  <title>La fête d'Annie — 23 avril 2027</title>
+  <meta name="description" content="Venez célébrer les 80 ans d'Annie du 23 au 25 avril 2027, à Villedieu-les-Poêles.">
+  <title>Les 80 ans d'Annie — 23 au 25 avril 2027</title>
   <style>
     :root {
       color-scheme: light;
@@ -209,6 +209,20 @@
     .map-link:hover { border-color: var(--green-dark); background: var(--green-dark); }
     .map-link:focus-visible { outline: 3px solid #bd8f48; outline-offset: 3px; }
 
+    .venue-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .website-link {
+      background: transparent;
+      color: var(--green-dark);
+    }
+
+    .website-link:hover { background: var(--sage); }
+
     .footer {
       margin: 30px 0 0;
       color: var(--muted);
@@ -242,17 +256,17 @@
       <circle cx="21" cy="19" r="3" fill="#b7815e"/>
     </svg>
 
-    <p class="eyebrow">Une belle journée à la campagne</p>
+    <p class="eyebrow">Un beau week-end à la campagne</p>
     <h1>Annie</h1>
-    <p class="intro">Vous êtes chaleureusement invités à célébrer son anniversaire&nbsp;!</p>
+    <p class="intro">Annie fête ses 80 ans&nbsp;! Venez célébrer ce bel anniversaire&nbsp;!</p>
 
     <hr class="rule">
 
     <p class="date-label">À vos agendas</p>
-    <p class="date"><time datetime="2027-04-23">Vendredi 23 avril 2027</time></p>
+    <p class="date">Du <time datetime="2027-04-23">vendredi 23</time> <br/> au <br/> <time datetime="2027-04-25">dimanche 25 avril 2027</time></p>
 
     <p class="countdown-title">Le compte à rebours est lancé</p>
-    <div class="countdown" id="countdown" role="timer" aria-label="Compte à rebours jusqu'au 23 avril 2027">
+    <div class="countdown" id="countdown" role="timer" aria-label="Compte à rebours jusqu'au week-end du 23 au 25 avril 2027">
       <div class="unit"><span id="days">--</span><small>Jours</small></div>
       <div class="unit"><span id="hours">--</span><small>Heures</small></div>
       <div class="unit"><span id="minutes">--</span><small>Minutes</small></div>
@@ -263,18 +277,23 @@
     <hr class="rule">
 
     <p class="date-label">Rendez-vous à</p>
-    <p class="venue">Auberge St Vincent au Parc</p>
-    <p class="town">Villedieu-les-Poêles</p>
-    <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Auberge+St+Vincent+au+Parc%2C+Villedieu-les-Po%C3%AAles" target="_blank" rel="noopener noreferrer">
-      Voir le lieu sur la carte
-    </a>
+    <p class="venue">l'Auberge St Vincent</p>
+    <p class="town">50870 Le Parc</p>
+    <div class="venue-links">
+      <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Auberge+St+Vincent+au+Parc%2C+Villedieu-les-Po%C3%AAles" target="_blank" rel="noopener noreferrer">
+        Voir le lieu sur la carte
+      </a>
+      <a class="map-link website-link" href="https://www.laclefdecamp.fr/gites/1044/auberge-st-vincent-et-diligence-35pers-2-gites-jacuzzi-jeux/" target="_blank" rel="noopener noreferrer">
+        Site de l’auberge
+      </a>
+    </div>
 
     <p class="footer">Au plaisir de fêter cela ensemble&nbsp;!</p>
   </main>
 
   <script>
     const eventStart = new Date("2027-04-23T00:00:00+02:00").getTime();
-    const eventEnd = new Date("2027-04-24T00:00:00+02:00").getTime();
+    const eventEnd = new Date("2027-04-26T00:00:00+02:00").getTime();
     const units = {
       days: document.getElementById("days"),
       hours: document.getElementById("hours"),
@@ -289,13 +308,13 @@
 
       if (now >= eventStart && now < eventEnd) {
         Object.values(units).forEach(unit => { unit.textContent = "00"; });
-        eventDay.textContent = "C’est aujourd’hui !";
+        eventDay.textContent = "C’est le grand week-end !";
         return;
       }
 
       if (now >= eventEnd) {
         Object.values(units).forEach(unit => { unit.textContent = "00"; });
-        eventDay.textContent = "Cette belle journée est passée.";
+        eventDay.textContent = "Le week-end est terminé. Merci d’avoir fêté cela ensemble !";
         return;
       }
 
