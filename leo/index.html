@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#141414">
+  <meta name="description" content="Léo fête ses 33 ans le samedi 21 novembre 2026. Une invitation aux couleurs du rap des années 90 et 2000.">
+  <title>Léo passe au niveau 33 — anniversaire rap</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: "Trebuchet MS", Arial, sans-serif;
+      color: #f5f0e5;
+      background: #141414;
+      font-synthesis: none;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      --ink: #141414;
+      --paper: #f5f0e5;
+      --orange: #ff6138;
+      --lime: #d6f15b;
+      --muted: #b6b0a5;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      min-width: 320px;
+      min-height: 100vh;
+      min-height: 100svh;
+      margin: 0;
+      padding: 28px 16px;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(ellipse at 10% 12%, rgba(255, 97, 56, .13), transparent 28rem),
+        radial-gradient(ellipse at 90% 86%, rgba(214, 241, 91, .08), transparent 26rem),
+        var(--ink);
+    }
+
+    .invitation {
+      position: relative;
+      isolation: isolate;
+      width: min(100%, 620px);
+      overflow: hidden;
+      padding: clamp(30px, 7vw, 58px) clamp(22px, 7vw, 62px) 34px;
+      border: 1px solid rgba(245, 240, 229, .2);
+      border-radius: 4px;
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, .035), transparent 42%),
+        #20201e;
+      box-shadow: 0 24px 80px rgba(0, 0, 0, .45);
+      text-align: center;
+    }
+
+    .invitation::before {
+      position: absolute;
+      z-index: -1;
+      top: -115px;
+      right: -105px;
+      width: 280px;
+      aspect-ratio: 1;
+      border: 1px solid rgba(255, 97, 56, .18);
+      border-radius: 50%;
+      box-shadow: 0 0 0 14px rgba(255, 97, 56, .035), 0 0 0 30px rgba(255, 97, 56, .025);
+      content: "";
+    }
+
+    .eyebrow,
+    .date-label {
+      margin: 0;
+      color: var(--lime);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 15px 0 0;
+      color: var(--paper);
+      font-size: clamp(3.1rem, 13vw, 5.7rem);
+      font-weight: 900;
+      letter-spacing: -.09em;
+      line-height: .88;
+      text-transform: uppercase;
+    }
+
+    h1 span {
+      display: block;
+      color: var(--orange);
+      font-size: .47em;
+      letter-spacing: .16em;
+      line-height: 1.5;
+    }
+
+    .equalizer {
+      display: block;
+      width: min(54vw, 190px);
+      height: auto;
+      margin: 28px auto 24px;
+    }
+
+    .intro {
+      max-width: 390px;
+      margin: 0 auto;
+      color: var(--paper);
+      font-size: clamp(1.05rem, 3.8vw, 1.25rem);
+      line-height: 1.6;
+    }
+
+    .intro strong { color: var(--lime); }
+
+    .rule {
+      width: 82px;
+      height: 2px;
+      margin: 28px auto;
+      border: 0;
+      background: var(--orange);
+    }
+
+    .date-label { color: var(--orange); }
+
+    .date {
+      margin: 10px 0 0;
+      color: var(--paper);
+      font-size: clamp(1.35rem, 5vw, 1.8rem);
+      font-weight: 800;
+      letter-spacing: -.025em;
+      line-height: 1.35;
+    }
+
+    .countdown-title {
+      margin: 26px 0 12px;
+      color: var(--muted);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: clamp(7px, 2.5vw, 13px);
+    }
+
+    .unit {
+      display: grid;
+      min-width: 62px;
+      gap: 5px;
+      padding: 11px 9px 9px;
+      border: 1px solid rgba(245, 240, 229, .2);
+      background: rgba(0, 0, 0, .14);
+    }
+
+    .unit span {
+      color: var(--lime);
+      font-size: clamp(1.5rem, 6vw, 2rem);
+      font-variant-numeric: tabular-nums;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .unit small {
+      color: var(--muted);
+      font-size: .6rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .countdown-finished {
+      margin: 26px 0 0;
+      color: var(--lime);
+      font-weight: 700;
+    }
+
+    @media (max-width: 380px) {
+      body { padding: 16px 10px; }
+      .unit { min-width: 56px; padding-inline: 6px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="invitation">
+    <p class="eyebrow">33 ans · Toujours dans le game</p>
+    <h1>Léo<span>passe au niveau</span>33</h1>
+
+    <svg class="equalizer" viewBox="0 0 200 112" role="img" aria-label="Égaliseur graphique aux couleurs de l’invitation">
+      <path d="M13 57h18m138 0h18" stroke="#f5f0e5" stroke-width="2" stroke-linecap="round" opacity=".45"/>
+      <rect x="36" y="43" width="13" height="27" rx="6.5" fill="#d6f15b"/>
+      <rect x="57" y="27" width="13" height="59" rx="6.5" fill="#ff6138"/>
+      <rect x="78" y="10" width="13" height="93" rx="6.5" fill="#d6f15b"/>
+      <rect x="99" y="36" width="13" height="41" rx="6.5" fill="#ff6138"/>
+      <rect x="120" y="17" width="13" height="79" rx="6.5" fill="#d6f15b"/>
+      <rect x="141" y="45" width="13" height="23" rx="6.5" fill="#ff6138"/>
+    </svg>
+
+    <p class="intro">Prépare ton meilleur flow :<br><strong>Léo fête ses 33 ans !</strong></p>
+    <hr class="rule">
+
+    <p class="date-label">Bloque la date</p>
+    <p class="date"><time datetime="2026-11-21">Samedi 21 novembre 2026</time></p>
+
+    <p class="countdown-title">Le compte à rebours est lancé</p>
+    <div class="countdown" id="countdown" role="timer" aria-label="Compte à rebours jusqu'au samedi 21 novembre 2026 à 19 h">
+      <div class="unit"><span id="days">--</span><small>Jours</small></div>
+      <div class="unit"><span id="hours">--</span><small>Heures</small></div>
+      <div class="unit"><span id="minutes">--</span><small>Minutes</small></div>
+      <div class="unit"><span id="seconds">--</span><small>Secondes</small></div>
+    </div>
+    <p class="countdown-finished" id="countdown-finished" hidden>La soirée a commencé !</p>
+  </main>
+  <script>
+    const eventStart = new Date("2026-11-21T19:00:00+01:00").getTime();
+    const countdown = document.getElementById("countdown");
+    const finishedMessage = document.getElementById("countdown-finished");
+    let countdownInterval;
+
+    function updateCountdown() {
+      const remaining = eventStart - Date.now();
+
+      if (remaining <= 0) {
+        countdown.hidden = true;
+        finishedMessage.hidden = false;
+        if (countdownInterval) window.clearInterval(countdownInterval);
+        return;
+      }
+
+      const days = Math.floor(remaining / 86400000);
+      const hours = Math.floor((remaining % 86400000) / 3600000);
+      const minutes = Math.floor((remaining % 3600000) / 60000);
+      const seconds = Math.floor((remaining % 60000) / 1000);
+
+      document.getElementById("days").textContent = String(days);
+      document.getElementById("hours").textContent = String(hours).padStart(2, "0");
+      document.getElementById("minutes").textContent = String(minutes).padStart(2, "0");
+      document.getElementById("seconds").textContent = String(seconds).padStart(2, "0");
+    }
+
+    updateCountdown();
+    if (!countdown.hidden) countdownInterval = window.setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
