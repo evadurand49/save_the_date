@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f5f1e6">
-  <meta name="description" content="Venez célébrer les 80 ans d'Annie du 23 au 25 avril 2027, à Villedieu-les-Poêles.">
-  <title>Les 80 ans d'Annie — 23 au 25 avril 2027</title>
+  <meta name="description" content="Venez célébrer les 80 ans d'Annie le samedi 24 avril 2027 à 18 h, à Villedieu-les-Poêles.">
+  <title>Les 80 ans d'Annie — samedi 24 avril 2027 à 18 h</title>
   <style>
     :root {
       color-scheme: light;
@@ -66,12 +66,11 @@
     .invitation::before { top: -77px; left: -64px; }
     .invitation::after { right: -64px; bottom: -77px; }
 
-    .sprig {
+    .bunting {
       display: block;
-      width: 58px;
-      height: 58px;
-      margin: 0 auto 15px;
-      color: var(--green);
+      width: min(100%, 270px);
+      height: auto;
+      margin: 0 auto 20px;
     }
 
     .eyebrow {
@@ -122,6 +121,53 @@
       color: var(--green);
       font-size: clamp(1.5rem, 6vw, 2rem);
       font-style: italic;
+    }
+
+    .cheers {
+      display: block;
+      width: 104px;
+      height: auto;
+      margin: 13px auto 0;
+    }
+
+    .glass-left,
+    .glass-right {
+      transform-box: view-box;
+      animation-duration: 3.2s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+    }
+
+    .glass-left {
+      transform-origin: 32.5% 84%;
+      animation-name: toast-left;
+    }
+
+    .glass-right {
+      transform-origin: 64.2% 84%;
+      animation-name: toast-right;
+    }
+
+    .clink-sparkle {
+      opacity: 0;
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: clink 3.2s ease-in-out infinite;
+    }
+
+    @keyframes toast-left {
+      0%, 12%, 58%, 100% { transform: translate(0, 0) rotate(0); }
+      24%, 40% { transform: translate(3px, -2px) rotate(5deg); }
+    }
+
+    @keyframes toast-right {
+      0%, 12%, 58%, 100% { transform: translate(0, 0) rotate(0); }
+      24%, 40% { transform: translate(-3px, -2px) rotate(-5deg); }
+    }
+
+    @keyframes clink {
+      0%, 17%, 48%, 100% { opacity: 0; transform: scale(.5); }
+      25%, 38% { opacity: 1; transform: scale(1); }
     }
 
     .rule {
@@ -198,6 +244,8 @@
       font-style: italic;
     }
 
+    .event-day + .rule { margin-top: 16px; }
+
     .venue {
       margin: 0;
       color: var(--green-dark);
@@ -273,33 +321,75 @@
         animation-duration: .01ms !important;
         animation-iteration-count: 1 !important;
       }
+
+      .glass-left,
+      .glass-right,
+      .clink-sparkle {
+        animation: none;
+      }
+
+      .clink-sparkle { opacity: 1; }
     }
   </style>
 </head>
 <body>
   <main class="invitation">
-    <svg class="sprig" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-      <path d="M32 56C32 39 34 22 47 8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
-      <path d="M36 40c-10-1-15-6-16-13 9 0 15 4 16 13Zm3-12c-1-8 2-14 8-18 3 8 0 14-8 18Zm-5 20c-9-1-14-5-16-12 9 0 14 4 16 12Z" fill="#e7ebdc" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
-      <circle cx="18" cy="14" r="3" fill="#c39b60"/>
-      <circle cx="24" cy="11" r="3" fill="#d2ad71"/>
-      <circle cx="21" cy="19" r="3" fill="#b7815e"/>
-    </svg>
-
     <p class="eyebrow">Un beau week-end à la campagne</p>
+    <svg class="bunting" viewBox="0 0 300 68" fill="none" aria-hidden="true">
+      <path d="M8 9C83 42 217 42 292 9" stroke="#71896b" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M32.2 17.9 76.4 28 55 49Z" fill="#d9b979"/>
+      <path d="M76.4 28 125 33.1 101 56Z" fill="#d6a89a"/>
+      <path d="M125 33.1h50L150 61Z" fill="#a9b99a"/>
+      <path d="M175 33.1 223.6 28 199 56Z" fill="#e5c992"/>
+      <path d="M223.6 28 267.8 17.9 245 49Z" fill="#c6a08b"/>
+    </svg>
     <h1>Annie</h1>
     <p class="intro">fête ses</p>
     <p class="milestone" aria-label="80 ans">
       <span class="milestone-number">80</span>
       <span class="milestone-label">ans</span>
     </p>
+    <svg class="cheers" viewBox="0 0 120 64" fill="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="champagne" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#f6d990"/>
+          <stop offset="1" stop-color="#d8a951"/>
+        </linearGradient>
+      </defs>
+      <g class="glass-left">
+        <path d="M33 8h18c-.6 13.5-3.4 24.4-9 29-5.6-4.6-8.4-15.5-9-29Z" fill="#fffdf7" fill-opacity=".72"/>
+        <path d="M34.7 20q7.3-1.5 14.6 0c-.8 7-3.6 13.1-7.3 15.2-3.7-2.1-6.5-8.2-7.3-15.2Z" fill="url(#champagne)"/>
+        <circle cx="39" cy="28" r="1.1" fill="#fff8df"/>
+        <circle cx="44.5" cy="25" r=".9" fill="#fff8df"/>
+        <circle cx="42" cy="32" r=".8" fill="#fff8df"/>
+        <path d="M33 8h18c-.6 13.5-3.4 24.4-9 29-5.6-4.6-8.4-15.5-9-29Z" stroke="#71896b" stroke-width="1.6" stroke-linejoin="round"/>
+        <path d="M33 8h18M42 37v16m-8 3h16" stroke="#71896b" stroke-width="1.6" stroke-linecap="round"/>
+      </g>
+      <g class="glass-right">
+        <path d="M69 8h18c-.6 13.5-3.4 24.4-9 29-5.6-4.6-8.4-15.5-9-29Z" fill="#fffdf7" fill-opacity=".72"/>
+        <path d="M70.7 20q7.3-1.5 14.6 0c-.8 7-3.6 13.1-7.3 15.2-3.7-2.1-6.5-8.2-7.3-15.2Z" fill="url(#champagne)"/>
+        <circle cx="75" cy="28" r="1.1" fill="#fff8df"/>
+        <circle cx="80.5" cy="25" r=".9" fill="#fff8df"/>
+        <circle cx="78" cy="32" r=".8" fill="#fff8df"/>
+        <path d="M69 8h18c-.6 13.5-3.4 24.4-9 29-5.6-4.6-8.4-15.5-9-29Z" stroke="#71896b" stroke-width="1.6" stroke-linejoin="round"/>
+        <path d="M69 8h18M78 37v16m-8 3h16" stroke="#71896b" stroke-width="1.6" stroke-linecap="round"/>
+      </g>
+      <g class="clink-sparkle" stroke="#c69a68" stroke-linecap="round" stroke-width="1.5">
+        <path d="M60 13v3m0 12v3m-9-9h3m12 0h3m-15-6 2 2m10 10 2 2m0-14-2 2m-10 10-2 2"/>
+        <path d="m60 17 2 4 4 1-4 2-2 4-2-4-4-2 4-1 2-4Z" fill="#f6d990" stroke="none"/>
+      </g>
+      <path d="m17 14 1.5 3.5L22 19l-3.5 1.5L17 24l-1.5-3.5L12 19l3.5-1.5L17 14Zm86 12 1.5 3.5L108 31l-3.5 1.5L103 36l-1.5-3.5L98 31l3.5-1.5L103 26Z" fill="#d9b979"/>
+      <circle cx="20" cy="38" r="1.7" fill="#d6a89a"/>
+      <circle cx="100" cy="13" r="1.7" fill="#a9b99a"/>
+      <path d="m27 11 2 3 3 1-3 1-2 3-1-3-3-1 3-1 1-3Zm67 28 2 3 3 1-3 1-2 3-1-3-3-1 3-1 1-3Z" fill="#d6a89a"/>
+    </svg>
     <hr class="rule">
 
     <p class="date-label">À vos agendas</p>
-    <p class="date">Du <time datetime="2027-04-23">vendredi 23</time> <br/> au <br/> <time datetime="2027-04-25">dimanche 25 avril 2027</time></p>
+    <p class="date"><time datetime="2027-04-24T18:00:00+02:00">Samedi 24 avril 2027<br>à 18 h</time></p>
 
     <p class="countdown-title">Le compte à rebours est lancé</p>
-    <div class="countdown" id="countdown" role="timer" aria-label="Compte à rebours jusqu'au week-end du 23 au 25 avril 2027">
+    <div class="countdown" id="countdown" role="timer" aria-label="Compte à rebours jusqu'au samedi 24 avril 2027 à 18 h">
       <div class="unit"><span id="days">--</span><small>Jours</small></div>
       <div class="unit"><span id="hours">--</span><small>Heures</small></div>
       <div class="unit"><span id="minutes">--</span><small>Minutes</small></div>
@@ -358,8 +448,9 @@
   </main>
 
   <script>
-    const eventStart = new Date("2027-04-23T00:00:00+02:00").getTime();
-    const eventEnd = new Date("2027-04-26T00:00:00+02:00").getTime();
+    const celebrationStart = new Date("2027-04-23T17:00:00+02:00").getTime();
+    const eventStart = new Date("2027-04-24T18:00:00+02:00").getTime();
+    const eventEnd = new Date("2027-04-25T19:00:00+02:00").getTime();
     const units = {
       days: document.getElementById("days"),
       hours: document.getElementById("hours"),
@@ -372,24 +463,18 @@
     function updateCountdown() {
       const now = Date.now();
 
-      if (now >= eventStart && now < eventEnd) {
-        Object.values(units).forEach(unit => { unit.textContent = "00"; });
-        eventDay.textContent = "C’est le grand week-end !";
-        return;
-      }
-
       if (now >= eventEnd) {
         Object.values(units).forEach(unit => { unit.textContent = "00"; });
         eventDay.textContent = "Le week-end est terminé. Merci d’avoir fêté cela ensemble !";
         return;
       }
 
-      const remaining = eventStart - now;
+      const remaining = Math.max(0, eventStart - now);
       units.days.textContent = Math.floor(remaining / 86400000);
       units.hours.textContent = pad(Math.floor(remaining / 3600000) % 24);
       units.minutes.textContent = pad(Math.floor(remaining / 60000) % 60);
       units.seconds.textContent = pad(Math.floor(remaining / 1000) % 60);
-      eventDay.textContent = "";
+      eventDay.textContent = now >= celebrationStart ? "C’est le grand week-end !" : "";
     }
 
     updateCountdown();
