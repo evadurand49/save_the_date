@@ -22,6 +22,8 @@
       --paper: #fffdf7;
       --muted: #6e7667;
       --border: #dce1d2;
+      --coral: #b94f3e;
+      --coral-soft: #fbede7;
     }
 
     * { box-sizing: border-box; }
@@ -102,24 +104,44 @@
     }
 
     .milestone {
+      position: relative;
+      isolation: isolate;
       display: flex;
-      align-items: baseline;
+      min-height: 158px;
+      align-items: center;
       justify-content: center;
-      gap: 9px;
-      margin: 0;
+      gap: 5px;
+      margin: 3px 0 0;
       color: var(--green-dark);
       font-family: Georgia, "Times New Roman", serif;
       line-height: 1;
     }
 
+    .milestone::before {
+      position: absolute;
+      z-index: -1;
+      top: 50%;
+      left: 50%;
+      width: 150px;
+      aspect-ratio: 1;
+      border: 1px solid rgba(185, 79, 62, .32);
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--coral-soft) 0 68%, transparent 69%);
+      content: "";
+      transform: translate(-50%, -50%);
+    }
+
     .milestone-number {
-      font-size: clamp(5.5rem, 22vw, 8rem);
-      letter-spacing: -.08em;
+      color: var(--coral);
+      font-size: clamp(6rem, 24vw, 8rem);
+      font-weight: 700;
+      letter-spacing: -.09em;
+      text-shadow: 0 3px 0 var(--paper);
     }
 
     .milestone-label {
-      color: var(--green);
-      font-size: clamp(1.5rem, 6vw, 2rem);
+      color: var(--coral);
+      font-size: clamp(1.35rem, 5vw, 1.7rem);
       font-style: italic;
     }
 
@@ -175,7 +197,7 @@
       height: 1px;
       margin: 28px auto;
       border: 0;
-      background: #b7c3a9;
+      background: linear-gradient(90deg, transparent, var(--coral), transparent);
     }
 
     .date-label {
@@ -298,7 +320,6 @@
       width: 100%;
       height: auto;
       margin: 24px auto -4px;
-      color: var(--green);
     }
 
     .footer {
@@ -411,38 +432,7 @@
       </a>
     </div>
 
-    <svg class="meadow" viewBox="0 0 520 132" role="img" aria-labelledby="meadow-title">
-      <title id="meadow-title">Un petit paysage de campagne avec des collines, des arbres et des fleurs</title>
-      <path d="M0 75C76 35 133 50 200 71s128 13 184-14 93-20 136-2v77H0Z" fill="#eef0e4"/>
-      <path d="M0 91c72-28 141-13 205 6s128 8 190-15 92-17 125-6v56H0Z" fill="#dfe7d5"/>
-      <g fill="#9eaf8c">
-        <path d="M72 89V57h5v32z"/>
-        <circle cx="74" cy="50" r="15"/>
-        <circle cx="63" cy="57" r="10"/>
-        <circle cx="85" cy="58" r="11"/>
-        <path d="M434 85V48h5v37z"/>
-        <circle cx="436" cy="41" r="17"/>
-        <circle cx="423" cy="49" r="11"/>
-        <circle cx="449" cy="51" r="12"/>
-        <path d="M462 84V60h4v24z"/>
-        <circle cx="464" cy="55" r="11"/>
-      </g>
-      <g fill="none" stroke="#71896b" stroke-linecap="round" stroke-width="1.5">
-        <path d="M0 104c45-9 68-7 106 1m29 4c42-8 71-7 102 0m35 0c43-9 68-8 103 0m38-3c36-8 69-7 107 1"/>
-        <path d="M25 121l-3-10m3 10 5-9m72 5-2-9m2 9 5-8m159 12-3-11m3 11 5-8m101 6-2-10m2 10 5-9m59 10-3-11m3 11 5-8"/>
-      </g>
-      <g fill="none" stroke="#71896b" stroke-linecap="round" stroke-width="1.4">
-        <path d="M151 127V99m0 16-8-7m8 2 7-8"/>
-        <path d="M371 127v-25m0 14-7-7m7 1 7-8"/>
-      </g>
-      <g fill="#c69a68">
-        <circle cx="143" cy="107" r="2.5"/><circle cx="139" cy="107" r="2.5"/><circle cx="143" cy="103" r="2.5"/><circle cx="147" cy="107" r="2.5"/><circle cx="143" cy="111" r="2.5"/>
-        <circle cx="363" cy="104" r="2.5"/><circle cx="359" cy="104" r="2.5"/><circle cx="363" cy="100" r="2.5"/><circle cx="367" cy="104" r="2.5"/><circle cx="363" cy="108" r="2.5"/>
-      </g>
-      <g fill="#f7f3e8">
-        <circle cx="143" cy="107" r="1.4"/><circle cx="363" cy="104" r="1.4"/>
-      </g>
-    </svg>
+    <img class="meadow" src="resources/footer.png" alt="Fête familiale à la campagne : des adultes partagent un repas dans le jardin pendant que les enfants jouent." width="2172" height="724">
 
     <p class="footer">Au plaisir de fêter cela ensemble&nbsp;!</p>
   </main>
