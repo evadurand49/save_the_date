@@ -58,12 +58,14 @@
       position: relative;
       z-index: 1;
       margin: -64px 0 28px;
-      color: var(--paper);
+      color: #7b2c57;
       font-family: "Brush Script MT", "Segoe Script", "URW Chancery L", cursive;
       font-size: 4.2rem;
       font-style: italic;
       font-weight: 700;
       line-height: 1.1;
+      -webkit-text-stroke: 1px var(--paper);
+      paint-order: stroke fill;
       text-shadow: 2px 3px 0 var(--green-dark), 0 0 8px rgba(32, 61, 48, .6);
       transform: rotate(-4deg);
     }
@@ -229,7 +231,7 @@
     <h1>On fête ça&nbsp;!</h1>
     <hr class="rule">
 
-    <p class="date-label">À vos agendas</p>
+    <p class="date-label">Mon anniversaire le</p>
     <p class="date"><time datetime="2027-04-24T18:00:00+02:00">Samedi 24 avril 2027<br>à 18 h</time></p>
 
     <p class="countdown-title">Le compte à rebours est lancé</p>
