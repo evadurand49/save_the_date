@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#ef6b35">
-  <meta name="description" content="Venez célébrer les 80 ans d'Annie le samedi 24 avril 2027 à 18 h, à Villedieu-les-Poêles.">
-  <title>Les 80 ans d'Annie — samedi 24 avril 2027 à 18 h</title>
+  <meta name="description" content="Venez célébrer l'anniversaire d'Annie le samedi 24 avril 2027 à 18 h, à Villedieu-les-Poêles.">
+  <title>On fête ça ! — samedi 24 avril 2027 à 18 h</title>
   <style>
     :root {
       color-scheme: light;
@@ -57,39 +57,15 @@
     h1 {
       position: relative;
       z-index: 1;
-      margin: 22px 0 8px;
-      color: var(--orange-dark);
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 3.6rem;
-      font-weight: 700;
-      line-height: 1.04;
-    }
-
-    .milestone {
-      display: flex;
-      min-height: 152px;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      margin: 2px 0 0;
-      color: var(--green);
-      font-family: Georgia, "Times New Roman", serif;
-      line-height: 1;
-    }
-
-    .milestone-number {
-      color: var(--green);
-      font-size: 7.5rem;
-      font-weight: 700;
-      text-shadow: 4px 4px 0 #f4d786;
-    }
-
-    .milestone-label {
-      align-self: center;
-      margin-top: 34px;
-      color: var(--orange-dark);
-      font-size: 1.7rem;
+      margin: -64px 0 28px;
+      color: var(--paper);
+      font-family: "Brush Script MT", "Segoe Script", "URW Chancery L", cursive;
+      font-size: 4.2rem;
       font-style: italic;
+      font-weight: 700;
+      line-height: 1.1;
+      text-shadow: 2px 3px 0 var(--green-dark), 0 0 8px rgba(32, 61, 48, .6);
+      transform: rotate(-4deg);
     }
 
     .rule {
@@ -222,7 +198,7 @@
       z-index: 0;
       width: calc(100% + 40px);
       height: 190px;
-      margin: -24px -20px -50px;
+      margin: -24px -20px 0;
       object-fit: cover;
       object-position: center 55%;
     }
@@ -230,9 +206,7 @@
     @media (max-width: 420px) {
       body { padding: 22px 12px; }
       .invitation { padding: 38px 18px 28px; }
-      h1 { font-size: 2.75rem; }
-      .milestone { min-height: 130px; }
-      .milestone-number { font-size: 6.2rem; }
+      h1 { margin-top: -56px; font-size: 2.8rem; }
       .countdown { gap: 6px; }
       .unit { min-width: 0; flex: 1; padding-inline: 5px; }
       .unit span { font-size: 1.5rem; }
@@ -240,7 +214,7 @@
       .meadow {
         width: calc(100% + 36px);
         height: 165px;
-        margin: -20px -18px -46px;
+        margin: -20px -18px 0;
       }
     }
 
@@ -251,10 +225,6 @@
 </head>
 <body>
   <main class="invitation">
-    <p class="milestone" aria-label="80 ans">
-      <span class="milestone-number">80</span>
-      <span class="milestone-label">ans</span>
-    </p>
     <img class="meadow" src="resources/mont-saint-michel.png" alt="Coucher de soleil sur le Mont-Saint-Michel, au loin derrière un champ fleuri.">
     <h1>On fête ça&nbsp;!</h1>
     <hr class="rule">
