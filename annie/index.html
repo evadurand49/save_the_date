@@ -57,7 +57,7 @@
     h1 {
       position: relative;
       z-index: 1;
-      margin: 0 0 4px;
+      margin: 0 0 12px;
       color: var(--orange-dark);
       font-family: "Brush Script MT", "Segoe Script", "URW Chancery L", cursive;
       font-size: 4.2rem;
@@ -205,22 +205,27 @@
     }
 
     @media (max-width: 420px) {
-      body { padding: 22px 12px; }
-      .invitation { padding: 38px 18px 28px; }
+      body { padding: 10px 12px; }
+      .invitation { padding: 22px 18px 18px; }
       h1 {
         width: fit-content;
         max-width: 100%;
-        margin: 0 auto 4px;
+        margin: 0 auto 12px;
         font-size: clamp(1.75rem, 8vw, 2.3rem);
         white-space: nowrap;
       }
+      .rule { margin: 14px auto; }
+      .countdown-title { margin: 16px 0 8px; }
+      .event-day { margin-top: 8px; }
+      .event-day + .rule { margin-top: 10px; }
+      .town { margin-bottom: 12px; }
       .countdown { gap: 6px; }
       .unit { min-width: 0; flex: 1; padding-inline: 5px; }
       .unit span { font-size: 1.5rem; }
       .unit small { font-size: .55rem; }
       .meadow {
         width: calc(100% + 36px);
-        height: 165px;
+        height: 135px;
         margin: 0 -18px;
       }
     }
