@@ -3,27 +3,27 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f5f1e6">
+  <meta name="theme-color" content="#ef6b35">
   <meta name="description" content="Venez célébrer les 80 ans d'Annie le samedi 24 avril 2027 à 18 h, à Villedieu-les-Poêles.">
   <title>Les 80 ans d'Annie — samedi 24 avril 2027 à 18 h</title>
   <style>
     :root {
       color-scheme: light;
       font-family: "Trebuchet MS", Arial, sans-serif;
-      color: #344536;
-      background: #f5f1e6;
+      color: #293d32;
+      background: #ef6b35;
       font-synthesis: none;
       text-rendering: optimizeLegibility;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-      --green: #49664b;
-      --green-dark: #304c36;
-      --sage: #e7ebdc;
-      --paper: #fffdf7;
-      --muted: #6e7667;
-      --border: #dce1d2;
-      --coral: #b94f3e;
-      --coral-soft: #fbede7;
+      --orange: #ef6b35;
+      --orange-dark: #bd4725;
+      --green: #315d42;
+      --green-dark: #203d30;
+      --paper: #fffaf0;
+      --muted: #647064;
+      --border: #e4d7bf;
+      --yellow: #f5c64c;
     }
 
     * { box-sizing: border-box; }
@@ -33,179 +33,97 @@
       min-height: 100vh;
       min-height: 100svh;
       margin: 0;
-      padding: 32px 18px;
+      padding: 38px 18px;
       display: grid;
       place-items: center;
-      background:
-        radial-gradient(ellipse at 10% 12%, rgba(201, 211, 180, .28), transparent 34rem),
-        radial-gradient(ellipse at 92% 88%, rgba(217, 199, 157, .2), transparent 30rem),
-        #f5f1e6;
+      background-color: var(--orange);
+      background-image: radial-gradient(#fff 2.5px, transparent 2.8px);
+      background-position: 8px 8px;
+      background-size: 32px 32px;
     }
 
     .invitation {
-      position: relative;
-      width: min(100%, 620px);
+      width: min(100%, 700px);
       overflow: hidden;
-      padding: clamp(32px, 7vw, 58px) clamp(22px, 7vw, 64px) 36px;
-      border: 1px solid #e4e3d6;
-      border-radius: 8px;
+      padding: 54px clamp(22px, 7vw, 70px) 36px;
+      border: 3px solid #fff;
+      border-radius: 4px;
       background: var(--paper);
-      box-shadow: 0 18px 55px rgba(67, 76, 52, .1);
+      box-shadow: 12px 12px 0 rgba(151, 54, 25, .26);
       text-align: center;
     }
 
-    .invitation::before,
-    .invitation::after {
-      position: absolute;
-      width: 112px;
-      height: 112px;
-      border: 1px solid rgba(112, 137, 99, .25);
-      border-radius: 50%;
-      content: "";
-      pointer-events: none;
-    }
-
-    .invitation::before { top: -77px; left: -64px; }
-    .invitation::after { right: -64px; bottom: -77px; }
-
-    .bunting {
-      display: block;
-      width: min(100%, 270px);
-      height: auto;
-      margin: 0 auto 20px;
-    }
-
     .eyebrow {
+      display: inline-block;
       margin: 0;
-      color: var(--green);
-      font-size: .73rem;
+      padding: 8px 14px;
+      border-radius: 2px;
+      background: var(--green);
+      color: #fff;
+      font-size: .78rem;
       font-weight: 700;
-      letter-spacing: .22em;
+      letter-spacing: .12em;
       text-transform: uppercase;
     }
 
     h1 {
-      margin: 13px 0 8px;
-      color: var(--green-dark);
+      margin: 22px 0 8px;
+      color: var(--orange-dark);
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(3.2rem, 12vw, 5.2rem);
-      font-weight: 400;
-      letter-spacing: -.055em;
-      line-height: 1;
+      font-size: 3.6rem;
+      font-weight: 700;
+      line-height: 1.04;
     }
 
     .intro {
-      max-width: 390px;
-      margin: 0 auto;
-      color: var(--muted);
+      margin: 0;
+      color: var(--green-dark);
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(1.05rem, 3.5vw, 1.25rem);
-      line-height: 1.65;
+      font-size: 1.35rem;
+      line-height: 1.55;
     }
 
     .milestone {
-      position: relative;
-      isolation: isolate;
       display: flex;
-      min-height: 158px;
+      min-height: 152px;
       align-items: center;
       justify-content: center;
-      gap: 5px;
-      margin: 3px 0 0;
-      color: var(--green-dark);
+      gap: 10px;
+      margin: 2px 0 0;
+      color: var(--green);
       font-family: Georgia, "Times New Roman", serif;
       line-height: 1;
     }
 
-    .milestone::before {
-      position: absolute;
-      z-index: -1;
-      top: 50%;
-      left: 50%;
-      width: 150px;
-      aspect-ratio: 1;
-      border: 1px solid rgba(185, 79, 62, .32);
-      border-radius: 50%;
-      background: radial-gradient(circle, var(--coral-soft) 0 68%, transparent 69%);
-      content: "";
-      transform: translate(-50%, -50%);
-    }
-
     .milestone-number {
-      color: var(--coral);
-      font-size: clamp(6rem, 24vw, 8rem);
+      color: var(--green);
+      font-size: 7.5rem;
       font-weight: 700;
-      letter-spacing: -.09em;
-      text-shadow: 0 3px 0 var(--paper);
+      text-shadow: 4px 4px 0 #f4d786;
     }
 
     .milestone-label {
-      color: var(--coral);
-      font-size: clamp(1.35rem, 5vw, 1.7rem);
+      align-self: center;
+      margin-top: 34px;
+      color: var(--orange-dark);
+      font-size: 1.7rem;
       font-style: italic;
     }
 
-    .cheers {
-      display: block;
-      width: 104px;
-      height: auto;
-      margin: 13px auto 0;
-    }
-
-    .glass-left,
-    .glass-right {
-      transform-box: view-box;
-      animation-duration: 3.2s;
-      animation-iteration-count: infinite;
-      animation-timing-function: ease-in-out;
-    }
-
-    .glass-left {
-      transform-origin: 32.5% 84%;
-      animation-name: toast-left;
-    }
-
-    .glass-right {
-      transform-origin: 64.2% 84%;
-      animation-name: toast-right;
-    }
-
-    .clink-sparkle {
-      opacity: 0;
-      transform-box: fill-box;
-      transform-origin: center;
-      animation: clink 3.2s ease-in-out infinite;
-    }
-
-    @keyframes toast-left {
-      0%, 12%, 58%, 100% { transform: translate(0, 0) rotate(0); }
-      24%, 40% { transform: translate(3px, -2px) rotate(5deg); }
-    }
-
-    @keyframes toast-right {
-      0%, 12%, 58%, 100% { transform: translate(0, 0) rotate(0); }
-      24%, 40% { transform: translate(-3px, -2px) rotate(-5deg); }
-    }
-
-    @keyframes clink {
-      0%, 17%, 48%, 100% { opacity: 0; transform: scale(.5); }
-      25%, 38% { opacity: 1; transform: scale(1); }
-    }
-
     .rule {
-      width: 76px;
-      height: 1px;
-      margin: 28px auto;
+      width: 90px;
+      height: 4px;
+      margin: 26px auto;
       border: 0;
-      background: linear-gradient(90deg, transparent, var(--coral), transparent);
+      background: var(--yellow);
     }
 
     .date-label {
       margin: 0 0 8px;
-      color: var(--muted);
-      font-size: .72rem;
+      color: var(--orange-dark);
+      font-size: .75rem;
       font-weight: 700;
-      letter-spacing: .17em;
+      letter-spacing: .14em;
       text-transform: uppercase;
     }
 
@@ -213,47 +131,48 @@
       margin: 0;
       color: var(--green-dark);
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(1.45rem, 5vw, 2rem);
-      line-height: 1.3;
+      font-size: 1.8rem;
+      line-height: 1.35;
     }
 
     .countdown-title {
-      margin: 27px 0 12px;
+      margin: 26px 0 12px;
       color: var(--muted);
-      font-size: .72rem;
+      font-size: .74rem;
       font-weight: 700;
-      letter-spacing: .14em;
+      letter-spacing: .1em;
       text-transform: uppercase;
     }
 
     .countdown {
       display: flex;
       justify-content: center;
-      gap: clamp(8px, 3vw, 16px);
+      gap: 10px;
     }
 
     .unit {
       display: grid;
-      min-width: 62px;
-      gap: 5px;
+      min-width: 66px;
+      gap: 6px;
       padding: 12px 10px 10px;
       border: 1px solid var(--border);
-      border-radius: 5px;
-      background: #fbfcf7;
+      border-bottom: 4px solid var(--orange);
+      border-radius: 3px;
+      background: #fff;
     }
 
     .unit span {
       color: var(--green-dark);
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(1.5rem, 6vw, 2rem);
+      font-size: 1.8rem;
       font-variant-numeric: tabular-nums;
       line-height: 1;
     }
 
     .unit small {
       color: var(--muted);
-      font-size: .64rem;
-      letter-spacing: .08em;
+      font-size: .62rem;
+      letter-spacing: .06em;
       text-transform: uppercase;
     }
 
@@ -262,7 +181,7 @@
       margin: 13px 0 0;
       color: var(--green);
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.1rem;
+      font-size: 1.08rem;
       font-style: italic;
     }
 
@@ -272,7 +191,7 @@
       margin: 0;
       color: var(--green-dark);
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.25rem;
+      font-size: 1.35rem;
       line-height: 1.45;
     }
 
@@ -282,25 +201,6 @@
       font-size: .95rem;
     }
 
-    .map-link {
-      display: inline-flex;
-      min-height: 46px;
-      align-items: center;
-      justify-content: center;
-      padding: 11px 20px;
-      border: 1px solid var(--green);
-      border-radius: 4px;
-      background: var(--green);
-      color: #fff;
-      font-size: .88rem;
-      font-weight: 700;
-      text-decoration: none;
-      transition: background-color .18s ease, border-color .18s ease;
-    }
-
-    .map-link:hover { border-color: var(--green-dark); background: var(--green-dark); }
-    .map-link:focus-visible { outline: 3px solid #bd8f48; outline-offset: 3px; }
-
     .venue-links {
       display: flex;
       flex-wrap: wrap;
@@ -308,102 +208,74 @@
       gap: 10px;
     }
 
+    .map-link {
+      display: inline-flex;
+      min-height: 46px;
+      align-items: center;
+      justify-content: center;
+      padding: 11px 18px;
+      border: 2px solid var(--green);
+      border-radius: 3px;
+      background: var(--green);
+      color: #fff;
+      font-size: .88rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background-color .18s ease, color .18s ease;
+    }
+
+    .map-link:hover { background: var(--green-dark); }
+    .map-link:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; }
+
     .website-link {
       background: transparent;
       color: var(--green-dark);
     }
 
-    .website-link:hover { background: var(--sage); }
+    .website-link:hover { color: #fff; }
 
     .meadow {
       display: block;
-      width: 100%;
+      width: calc(100% + 40px);
       height: auto;
-      margin: 24px auto -4px;
+      margin: 28px -20px -4px;
     }
 
     .footer {
-      margin: 30px 0 0;
-      color: var(--muted);
+      margin: 22px 0 0;
+      color: var(--green-dark);
       font-family: Georgia, "Times New Roman", serif;
-      font-size: .94rem;
+      font-size: 1rem;
       font-style: italic;
     }
 
-    @media (max-width: 380px) {
-      body { padding: 16px 10px; }
-      .unit { min-width: 56px; padding-inline: 7px; }
+    @media (max-width: 420px) {
+      body { padding: 22px 12px; }
+      .invitation { padding: 38px 18px 28px; }
+      h1 { font-size: 2.75rem; }
+      .milestone { min-height: 130px; }
+      .milestone-number { font-size: 6.2rem; }
+      .countdown { gap: 6px; }
+      .unit { min-width: 0; flex: 1; padding-inline: 5px; }
+      .unit span { font-size: 1.5rem; }
+      .unit small { font-size: .55rem; }
+      .meadow { width: calc(100% + 36px); margin-right: -18px; margin-left: -18px; }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        scroll-behavior: auto !important;
-        transition-duration: .01ms !important;
-        animation-duration: .01ms !important;
-        animation-iteration-count: 1 !important;
-      }
-
-      .glass-left,
-      .glass-right,
-      .clink-sparkle {
-        animation: none;
-      }
-
-      .clink-sparkle { opacity: 1; }
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
     }
   </style>
 </head>
 <body>
   <main class="invitation">
-    <p class="eyebrow">Un beau week-end à la campagne</p>
-    <svg class="bunting" viewBox="0 0 300 68" fill="none" aria-hidden="true">
-      <path d="M8 9C83 42 217 42 292 9" stroke="#71896b" stroke-width="1.5" stroke-linecap="round"/>
-      <path d="M32.2 17.9 76.4 28 55 49Z" fill="#d9b979"/>
-      <path d="M76.4 28 125 33.1 101 56Z" fill="#d6a89a"/>
-      <path d="M125 33.1h50L150 61Z" fill="#a9b99a"/>
-      <path d="M175 33.1 223.6 28 199 56Z" fill="#e5c992"/>
-      <path d="M223.6 28 267.8 17.9 245 49Z" fill="#c6a08b"/>
-    </svg>
-    <h1>Annie</h1>
-    <p class="intro">fête ses</p>
+    <p class="eyebrow">Annie · 80 ans</p>
+    <h1>On fête ça&nbsp;!</h1>
+    <p class="intro">Annie souffle ses bougies</p>
     <p class="milestone" aria-label="80 ans">
       <span class="milestone-number">80</span>
       <span class="milestone-label">ans</span>
     </p>
-    <svg class="cheers" viewBox="0 0 120 64" fill="none" aria-hidden="true">
-      <defs>
-        <linearGradient id="champagne" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="#f6d990"/>
-          <stop offset="1" stop-color="#d8a951"/>
-        </linearGradient>
-      </defs>
-      <g class="glass-left">
-        <path d="M33 8h18c-.6 13.5-3.4 24.4-9 29-5.6-4.6-8.4-15.5-9-29Z" fill="#fffdf7" fill-opacity=".72"/>
-        <path d="M34.7 20q7.3-1.5 14.6 0c-.8 7-3.6 13.1-7.3 15.2-3.7-2.1-6.5-8.2-7.3-15.2Z" fill="url(#champagne)"/>
-        <circle cx="39" cy="28" r="1.1" fill="#fff8df"/>
-        <circle cx="44.5" cy="25" r=".9" fill="#fff8df"/>
-        <circle cx="42" cy="32" r=".8" fill="#fff8df"/>
-        <path d="M33 8h18c-.6 13.5-3.4 24.4-9 29-5.6-4.6-8.4-15.5-9-29Z" stroke="#71896b" stroke-width="1.6" stroke-linejoin="round"/>
-        <path d="M33 8h18M42 37v16m-8 3h16" stroke="#71896b" stroke-width="1.6" stroke-linecap="round"/>
-      </g>
-      <g class="glass-right">
-        <path d="M69 8h18c-.6 13.5-3.4 24.4-9 29-5.6-4.6-8.4-15.5-9-29Z" fill="#fffdf7" fill-opacity=".72"/>
-        <path d="M70.7 20q7.3-1.5 14.6 0c-.8 7-3.6 13.1-7.3 15.2-3.7-2.1-6.5-8.2-7.3-15.2Z" fill="url(#champagne)"/>
-        <circle cx="75" cy="28" r="1.1" fill="#fff8df"/>
-        <circle cx="80.5" cy="25" r=".9" fill="#fff8df"/>
-        <circle cx="78" cy="32" r=".8" fill="#fff8df"/>
-        <path d="M69 8h18c-.6 13.5-3.4 24.4-9 29-5.6-4.6-8.4-15.5-9-29Z" stroke="#71896b" stroke-width="1.6" stroke-linejoin="round"/>
-        <path d="M69 8h18M78 37v16m-8 3h16" stroke="#71896b" stroke-width="1.6" stroke-linecap="round"/>
-      </g>
-      <g class="clink-sparkle" stroke="#c69a68" stroke-linecap="round" stroke-width="1.5">
-        <path d="M60 13v3m0 12v3m-9-9h3m12 0h3m-15-6 2 2m10 10 2 2m0-14-2 2m-10 10-2 2"/>
-        <path d="m60 17 2 4 4 1-4 2-2 4-2-4-4-2 4-1 2-4Z" fill="#f6d990" stroke="none"/>
-      </g>
-      <path d="m17 14 1.5 3.5L22 19l-3.5 1.5L17 24l-1.5-3.5L12 19l3.5-1.5L17 14Zm86 12 1.5 3.5L108 31l-3.5 1.5L103 36l-1.5-3.5L98 31l3.5-1.5L103 26Z" fill="#d9b979"/>
-      <circle cx="20" cy="38" r="1.7" fill="#d6a89a"/>
-      <circle cx="100" cy="13" r="1.7" fill="#a9b99a"/>
-      <path d="m27 11 2 3 3 1-3 1-2 3-1-3-3-1 3-1 1-3Zm67 28 2 3 3 1-3 1-2 3-1-3-3-1 3-1 1-3Z" fill="#d6a89a"/>
-    </svg>
     <hr class="rule">
 
     <p class="date-label">À vos agendas</p>
@@ -432,7 +304,36 @@
       </a>
     </div>
 
-    <img class="meadow" src="resources/footer.png" alt="Fête familiale à la campagne : des adultes partagent un repas dans le jardin pendant que les enfants jouent." width="2172" height="724">
+    <svg class="meadow" viewBox="0 0 1000 340" role="img" aria-label="Le Mont-Saint-Michel au loin, derrière un pré vert parsemé de fleurs colorées.">
+      <rect width="1000" height="340" fill="#bfe8e8"/>
+      <circle cx="812" cy="72" r="38" fill="#ffd46b"/>
+      <path d="M0 174Q150 126 285 170T560 158T1000 166V340H0Z" fill="#7bc4a0"/>
+      <path d="M0 207Q150 173 314 204T650 195T1000 204V340H0Z" fill="#4c9a69"/>
+      <path d="M385 209Q420 193 442 203L461 179 477 194 490 149 507 168 520 126 537 159 550 147 565 193 590 184 615 209Z" fill="#d4c6a8" stroke="#a4977d" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M478 167 520 126 537 159 550 147 565 193 590 184 615 209H473Z" fill="#b5a68b"/>
+      <path d="M493 143 519 111 525 143 537 159 520 168Z" fill="#eee1c5"/>
+      <path d="M516 112V89M511 94h10M513 102h6" stroke="#765c43" stroke-width="3" stroke-linecap="round"/>
+      <path d="M415 201h176M431 191h150M449 178h117M467 163h82M485 148h53" stroke="#897b65" stroke-width="3" opacity=".8"/>
+      <path d="M0 259Q190 222 377 258T730 252T1000 245V340H0Z" fill="#318051"/>
+      <path d="M0 292Q205 264 419 291T786 282T1000 285V340H0Z" fill="#276c45"/>
+      <g stroke="#286f48" stroke-width="3" stroke-linecap="round">
+        <path d="M64 323v-47m0 31-12-13m12 5 13-16M137 326v-54m0 35-13-15m13 7 15-17M844 328v-52m0 31-13-13m13 4 14-18M924 324v-46m0 28-12-15m12 6 13-17"/>
+      </g>
+      <g fill="#f7dc55" stroke="#fff3a6" stroke-width="2">
+        <circle cx="51" cy="275" r="7"/><circle cx="65" cy="270" r="7"/><circle cx="78" cy="277" r="7"/>
+        <circle cx="123" cy="270" r="6"/><circle cx="137" cy="265" r="6"/><circle cx="151" cy="272" r="6"/>
+        <circle cx="831" cy="274" r="7"/><circle cx="845" cy="269" r="7"/><circle cx="859" cy="276" r="7"/>
+      </g>
+      <g fill="#f27672" stroke="#ffd0a6" stroke-width="2">
+        <circle cx="247" cy="294" r="8"/><circle cx="262" cy="287" r="8"/><circle cx="277" cy="295" r="8"/>
+        <circle cx="701" cy="285" r="8"/><circle cx="716" cy="278" r="8"/><circle cx="731" cy="286" r="8"/>
+        <circle cx="953" cy="293" r="7"/><circle cx="966" cy="287" r="7"/><circle cx="979" cy="294" r="7"/>
+      </g>
+      <g fill="#fff7e2" stroke="#f2bd54" stroke-width="2">
+        <circle cx="190" cy="318" r="7"/><circle cx="202" cy="311" r="7"/><circle cx="214" cy="318" r="7"/>
+        <circle cx="602" cy="315" r="7"/><circle cx="614" cy="308" r="7"/><circle cx="626" cy="315" r="7"/>
+      </g>
+    </svg>
 
     <p class="footer">Au plaisir de fêter cela ensemble&nbsp;!</p>
   </main>
